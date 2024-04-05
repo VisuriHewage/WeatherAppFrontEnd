@@ -11,7 +11,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3500/auth', { user: username, pwd: password });
+      const response = await axios.post('https://weatherapprepo-74z5.onrender.com/auth', { user: username, pwd: password });
       localStorage.setItem('accessToken', response.data.accessToken);
       // Redirect to map page
       navigate('/map');
