@@ -28,6 +28,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Login from './Login';
 import Map from './Map';
+import Register from './Register';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Navigate to="/login" />} /> {/* Use Navigate instead of Redirect */}
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/map" element={<PrivateRoute />} /> {/* Use PrivateRoute directly */}
       </Routes>
     </Router>
